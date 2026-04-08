@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "protein pacing insulin",
     "metabolic health",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/insulin-sensitivity-if-p",
+  },
+  openGraph: {
+    title: "How IF-P Improves Insulin Sensitivity and Blood Sugar Control",
+    description:
+      "Intermittent fasting combined with protein pacing improves insulin sensitivity, glucose regulation, and nutrient partitioning. The metabolic science explained.",
+    url: "https://pacefast.app/blog/insulin-sensitivity-if-p",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "insulin sensitivity",
+      "blood sugar",
+      "intermittent fasting",
+      "protein pacing",
+      "metabolic health",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "How IF-P Improves Insulin Sensitivity and Blood Sugar Control",
+            description:
+              "Intermittent fasting combined with protein pacing improves insulin sensitivity, glucose regulation, and nutrient partitioning. The metabolic science explained.",
+            url: "https://pacefast.app/blog/insulin-sensitivity-if-p",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/insulin-sensitivity-if-p",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

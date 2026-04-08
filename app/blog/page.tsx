@@ -5,6 +5,24 @@ export const metadata: Metadata = {
   title: "Science & Blog",
   description:
     "Evidence-based articles on intermittent fasting, protein pacing, body recomposition, and the PRISE protocol. Backed by peer-reviewed research.",
+  keywords: [
+    "intermittent fasting research",
+    "protein pacing articles",
+    "IF-P science",
+    "fasting blog",
+    "body recomposition research",
+    "PRISE protocol studies",
+  ],
+  alternates: {
+    canonical: "https://pacefast.app/blog",
+  },
+  openGraph: {
+    title: "Science & Blog — PaceFast",
+    description:
+      "Evidence-based articles on intermittent fasting, protein pacing, body recomposition, and the PRISE protocol.",
+    url: "https://pacefast.app/blog",
+    type: "website",
+  },
 };
 
 interface Article {

@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "fasting fat burning",
     "metabolic health",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/intermittent-fasting-visceral-fat",
+  },
+  openGraph: {
+    title: "How Intermittent Fasting Targets Visceral Fat",
+    description:
+      "Clinical trials show IF combined with protein pacing reduces visceral fat by 33% in 8 weeks. Learn the mechanisms behind visceral fat loss through fasting.",
+    url: "https://pacefast.app/blog/intermittent-fasting-visceral-fat",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "visceral fat",
+      "intermittent fasting",
+      "belly fat loss",
+      "fat loss",
+      "protein pacing",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "How Intermittent Fasting Targets Visceral Fat",
+            description:
+              "Clinical trials show IF combined with protein pacing reduces visceral fat by 33% in 8 weeks. Learn the mechanisms behind visceral fat loss through fasting.",
+            url: "https://pacefast.app/blog/intermittent-fasting-visceral-fat",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/intermittent-fasting-visceral-fat",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "IF-P body recomp",
     "muscle protein synthesis",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/if-p-muscle-retention",
+  },
+  openGraph: {
+    title: "Losing Fat Without Losing Muscle: The IF-P Advantage",
+    description:
+      "Standard diets lose 25-30% of weight as muscle. IF-P participants gained 6% fat-free mass while losing weight. Learn how protein pacing protects lean tissue.",
+    url: "https://pacefast.app/blog/if-p-muscle-retention",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "muscle retention",
+      "body recomposition",
+      "fat loss",
+      "protein pacing",
+      "intermittent fasting",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Losing Fat Without Losing Muscle: The IF-P Advantage",
+            description:
+              "Standard diets lose 25-30% of weight as muscle. IF-P participants gained 6% fat-free mass while losing weight. Learn how protein pacing protects lean tissue.",
+            url: "https://pacefast.app/blog/if-p-muscle-retention",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/if-p-muscle-retention",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

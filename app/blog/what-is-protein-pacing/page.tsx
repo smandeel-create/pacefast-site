@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "protein distribution",
     "4 meals a day",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/what-is-protein-pacing",
+  },
+  openGraph: {
+    title: "What Is Protein Pacing? The Science Behind 4 Meals a Day",
+    description:
+      "Protein pacing spaces 4 high-protein meals across your eating window to maximise muscle protein synthesis. Learn the science behind the PRISE protocol.",
+    url: "https://pacefast.app/blog/what-is-protein-pacing",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "protein pacing",
+      "meal timing",
+      "muscle protein synthesis",
+      "PRISE protocol",
+      "intermittent fasting",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "What Is Protein Pacing? The Science Behind 4 Meals a Day",
+            description:
+              "Protein pacing spaces 4 high-protein meals across your eating window to maximise muscle protein synthesis. Learn the science behind the PRISE protocol.",
+            url: "https://pacefast.app/blog/what-is-protein-pacing",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/what-is-protein-pacing",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

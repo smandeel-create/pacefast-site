@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "appetite hormones IF-P",
     "hunger management diet",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/reduced-hunger-protein-pacing",
+  },
+  openGraph: {
+    title: "Why You Feel Less Hungry on IF-P Than Standard Diets",
+    description:
+      "IF-P participants report significantly less hunger than standard calorie restriction. How protein pacing and fasting regulate appetite hormones.",
+    url: "https://pacefast.app/blog/reduced-hunger-protein-pacing",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "hunger",
+      "intermittent fasting",
+      "appetite",
+      "protein pacing",
+      "satiety",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Why You Feel Less Hungry on IF-P Than Standard Diets",
+            description:
+              "IF-P participants report significantly less hunger than standard calorie restriction. How protein pacing and fasting regulate appetite hormones.",
+            url: "https://pacefast.app/blog/reduced-hunger-protein-pacing",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/reduced-hunger-protein-pacing",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

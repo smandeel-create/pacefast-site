@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "IF-P gut bacteria",
     "digestive health fasting",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/gut-microbiome-fasting",
+  },
+  openGraph: {
+    title: "Intermittent Fasting and Your Gut: What the Research Shows",
+    description:
+      "How intermittent fasting combined with protein pacing reshapes your gut microbiome, improves bacterial diversity, and strengthens immune function.",
+    url: "https://pacefast.app/blog/gut-microbiome-fasting",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "gut microbiome",
+      "intermittent fasting",
+      "gut health",
+      "protein pacing",
+      "digestive health",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Intermittent Fasting and Your Gut: What the Research Shows",
+            description:
+              "How intermittent fasting combined with protein pacing reshapes your gut microbiome, improves bacterial diversity, and strengthens immune function.",
+            url: "https://pacefast.app/blog/gut-microbiome-fasting",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/gut-microbiome-fasting",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

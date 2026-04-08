@@ -19,7 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://pacefast.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "PaceFast — Protein Pacing + Intermittent Fasting App",
     template: "%s | PaceFast",
@@ -38,13 +41,17 @@ export const metadata: Metadata = {
     "visceral fat loss",
     "protein pacing meals",
   ],
+  alternates: {
+    canonical: BASE_URL,
+  },
   openGraph: {
     title: "PaceFast — Protein Pacing + Intermittent Fasting",
     description:
       "The first app combining intermittent fasting with protein-paced meal planning. Backed by peer-reviewed science.",
-    url: "https://pacefast.app",
+    url: BASE_URL,
     siteName: "PaceFast",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
@@ -55,6 +62,38 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+/* ── JSON-LD structured data ── */
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PaceFast",
+  url: BASE_URL,
+  description:
+    "The first app combining intermittent fasting with protein-paced meal planning.",
+  sameAs: [],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "PaceFast",
+  url: BASE_URL,
+  description:
+    "Protein pacing + intermittent fasting. One app. Backed by science.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${BASE_URL}/blog?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -153,6 +192,14 @@ export default function RootLayout({
       className={`${inter.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <Header />
         {children}
         <Footer />

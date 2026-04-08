@@ -14,11 +14,53 @@ export const metadata: Metadata = {
     "chronic inflammation diet",
     "IF-P inflammation",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/anti-inflammatory-fasting",
+  },
+  openGraph: {
+    title: "The Anti-Inflammatory Effects of Intermittent Fasting and Protein Pacing",
+    description:
+      "IF-P reduces inflammatory markers CRP, IL-6, and TNF-α. How fasting and protein pacing combat chronic inflammation linked to aging and disease.",
+    url: "https://pacefast.app/blog/anti-inflammatory-fasting",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "anti-inflammatory",
+      "intermittent fasting",
+      "inflammation",
+      "protein pacing",
+      "chronic inflammation",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "The Anti-Inflammatory Effects of Intermittent Fasting and Protein Pacing",
+            description:
+              "IF-P reduces inflammatory markers CRP, IL-6, and TNF-α. How fasting and protein pacing combat chronic inflammation linked to aging and disease.",
+            url: "https://pacefast.app/blog/anti-inflammatory-fasting",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/anti-inflammatory-fasting",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"

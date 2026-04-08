@@ -13,11 +13,53 @@ export const metadata: Metadata = {
     "IF-P VO2 max",
     "oxygen efficiency fasting",
   ],
+  alternates: {
+    canonical: "https://pacefast.app/blog/vo2-max-intermittent-fasting",
+  },
+  openGraph: {
+    title: "How Intermittent Fasting Improves VO2 Max and Cardiorespiratory Fitness",
+    description:
+      "IF-P participants showed significant VO2 max improvements without changing their exercise routine. The science behind fasting and cardiorespiratory fitness.",
+    url: "https://pacefast.app/blog/vo2-max-intermittent-fasting",
+    type: "article",
+    publishedTime: "2026-03-15T00:00:00Z",
+    authors: ["PaceFast"],
+    tags: [
+      "VO2 max",
+      "intermittent fasting",
+      "fitness",
+      "cardiorespiratory",
+      "protein pacing",
+    ],
+  },
 };
 
 export default function Article() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "How Intermittent Fasting Improves VO2 Max and Cardiorespiratory Fitness",
+            description:
+              "IF-P participants showed significant VO2 max improvements without changing their exercise routine. The science behind fasting and cardiorespiratory fitness.",
+            url: "https://pacefast.app/blog/vo2-max-intermittent-fasting",
+            datePublished: "2026-03-15T00:00:00Z",
+            publisher: {
+              "@type": "Organization",
+              name: "PaceFast",
+              url: "https://pacefast.app",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://pacefast.app/blog/vo2-max-intermittent-fasting",
+            },
+          }),
+        }}
+      />
       <Link
         href="/blog"
         className="text-sm text-text-secondary hover:text-text-primary transition-colors"
