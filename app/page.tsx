@@ -34,10 +34,10 @@ function Benefit({
   return (
     <Link
       href={href}
-      className="group rounded-xl border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5"
+      className="group rounded-xl bg-white p-6 transition-all duration-200 hover:bg-surface"
     >
       <div className={`h-1.5 w-12 rounded-full ${accent} mb-5`} />
-      <h3 className="text-lg font-semibold text-text-primary group-hover:text-primary-hover transition-colors">{title}</h3>
+      <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
       <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">{text}</p>
       <span className="mt-4 inline-block text-sm font-medium text-text-secondary group-hover:text-text-primary transition-colors">
         Read the science &rarr;
@@ -58,7 +58,7 @@ function Step({
 }) {
   return (
     <div className="flex gap-5">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface border border-border text-text-primary font-semibold text-sm">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-text-primary font-semibold text-sm">
         {num}
       </div>
       <div>
@@ -88,7 +88,7 @@ function BlogCard({
   return (
     <Link
       href={href}
-      className="group rounded-xl border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5"
+      className="group rounded-xl bg-white p-6 transition-all duration-200 hover:bg-surface"
     >
       <div className={`h-1.5 w-8 rounded-full ${accent} mb-4`} />
       <span className="text-xs font-medium text-text-secondary uppercase tracking-wider">
@@ -113,7 +113,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative">
         <div className="mx-auto max-w-[1200px] px-6 pt-20 pb-16 md:pt-32 md:pb-24 text-center">
-          <div className="inline-block rounded-lg border border-border bg-surface px-4 py-1.5 text-sm text-text-secondary mb-8">
+          <div className="inline-block rounded-lg bg-white px-4 py-1.5 text-sm text-text-secondary mb-8">
             Coming soon to the App Store
           </div>
           <h1 className="font-serif text-4xl md:text-[54px] font-medium text-text-primary leading-[1.15] tracking-tight">
@@ -135,7 +135,7 @@ export default function Home() {
             </a>
             <Link
               href="/blog/what-is-protein-pacing"
-              className="rounded-lg border border-border px-8 py-3.5 text-base font-medium text-text-primary transition-all hover:bg-surface"
+              className="rounded-lg bg-white px-8 py-3.5 text-base font-medium text-text-primary transition-all hover:bg-surface"
             >
               Learn the Science
             </Link>
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS BAR ── */}
-      <section className="border-y border-border bg-surface">
+      <section className="bg-surface">
         <div className="mx-auto max-w-[1200px] px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           <Stat value="9%" label="Weight loss in 8 weeks" />
           <Stat value="33%" label="Visceral fat reduction" />
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="border-y border-border bg-surface">
+      <section className="bg-surface">
         <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-[40px] font-medium text-text-primary tracking-tight">
@@ -311,7 +311,7 @@ export default function Home() {
       {/* ── EMAIL SIGNUP ── */}
       <section
         id="signup"
-        className="border-t border-border bg-surface"
+        className="bg-surface"
       >
         <div className="mx-auto max-w-2xl px-6 py-20 md:py-28 text-center">
           <h2 className="font-serif text-3xl md:text-[40px] font-medium text-text-primary tracking-tight">
@@ -331,7 +331,7 @@ export default function Home() {
               name="email"
               placeholder="you@example.com"
               required
-              className="flex-1 rounded-lg border border-border bg-background px-5 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-border-dark focus:outline-none focus:ring-1 focus:ring-border-dark"
+              className="flex-1 rounded-lg bg-white px-5 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:outline-none focus:ring-1 focus:ring-border-dark"
             />
             <button
               type="submit"

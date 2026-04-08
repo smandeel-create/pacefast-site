@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora, JetBrains_Mono } from "next/font/google";
+import { Inter, Source_Serif_4, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
@@ -8,7 +8,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const lora = Lora({
+const sourceSerif = Source_Serif_4({
   variable: "--font-geist-serif",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
         <Link href="/" className="font-serif text-xl font-semibold tracking-tight text-text-primary">
           PaceFast
@@ -86,7 +86,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-surface mt-auto">
+    <footer className="bg-surface mt-auto">
       <div className="mx-auto max-w-[1200px] px-6 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
@@ -134,7 +134,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-border pt-6 text-center text-xs text-text-secondary">
+        <div className="mt-10 pt-6 text-center text-xs text-text-secondary">
           &copy; {new Date().getFullYear()} PaceFast. All rights reserved.
         </div>
       </div>
@@ -150,7 +150,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${lora.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
