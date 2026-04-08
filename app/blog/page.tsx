@@ -56,6 +56,46 @@ const articles: Article[] = [
     tag: "Metabolic Health",
     date: "April 2026",
   },
+  {
+    slug: "vo2-max-intermittent-fasting",
+    title: "How Intermittent Fasting Improves VO2 Max and Cardiorespiratory Fitness",
+    excerpt:
+      "IF-P participants showed significant VO2 max improvements without changing their exercise routine. The science behind fasting and cardiorespiratory fitness.",
+    tag: "Fitness",
+    date: "April 2026",
+  },
+  {
+    slug: "anti-inflammatory-fasting",
+    title: "The Anti-Inflammatory Effects of Intermittent Fasting and Protein Pacing",
+    excerpt:
+      "IF-P reduces CRP, IL-6, and TNF-α. How fasting and protein pacing combat the chronic inflammation linked to aging, joint pain, and disease.",
+    tag: "Inflammation",
+    date: "April 2026",
+  },
+  {
+    slug: "reduced-hunger-protein-pacing",
+    title: "Why You Feel Less Hungry on IF-P Than Standard Diets",
+    excerpt:
+      "IF-P participants report significantly less hunger than standard calorie restriction. How protein pacing and fasting regulate appetite hormones.",
+    tag: "Appetite",
+    date: "April 2026",
+  },
+  {
+    slug: "lipid-profile-if-p",
+    title: "How IF-P Improves Cholesterol, Triglycerides, and Heart Health",
+    excerpt:
+      "Improved cholesterol ratios, reduced triglycerides, and better cardiovascular risk markers. The heart health benefits of the IF-P protocol.",
+    tag: "Heart Health",
+    date: "April 2026",
+  },
+  {
+    slug: "metabolic-rate-fasting",
+    title: "Why IF-P Preserves Your Metabolic Rate While Standard Diets Tank It",
+    excerpt:
+      "Standard calorie restriction slows your metabolism. IF-P maintains resting metabolic rate through muscle preservation and hormonal optimisation.",
+    tag: "Metabolism",
+    date: "April 2026",
+  },
 ];
 
 export default function BlogIndex() {

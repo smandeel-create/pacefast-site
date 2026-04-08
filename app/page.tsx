@@ -15,17 +15,25 @@ function Benefit({
   icon,
   title,
   text,
+  href,
 }: {
   icon: string;
   title: string;
   text: string;
+  href: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/5 bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+    <Link
+      href={href}
+      className="group rounded-2xl border border-white/5 bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+    >
       <span className="text-3xl">{icon}</span>
-      <h3 className="mt-4 text-lg font-semibold text-text-primary">{title}</h3>
+      <h3 className="mt-4 text-lg font-semibold text-text-primary group-hover:text-primary transition-colors">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-text-secondary">{text}</p>
-    </div>
+      <span className="mt-3 inline-block text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+        Read the science &rarr;
+      </span>
+    </Link>
   );
 }
 
@@ -151,46 +159,55 @@ export default function Home() {
             icon="🔥"
             title="Visceral Fat Loss"
             text="33% reduction in visceral fat — the dangerous fat surrounding your organs linked to heart disease, type 2 diabetes, and metabolic syndrome."
+            href="/blog/intermittent-fasting-visceral-fat"
           />
           <Benefit
             icon="💪"
             title="Muscle Retention"
             text="6% increase in fat-free mass during weight loss. Protein pacing triggers muscle protein synthesis 4 times per day, protecting lean tissue."
+            href="/blog/if-p-muscle-retention"
           />
           <Benefit
             icon="🫁"
             title="Improved VO2 Max"
             text="Significant improvements in cardiorespiratory fitness, even without changes to exercise routine. Better oxygen efficiency across all activities."
+            href="/blog/vo2-max-intermittent-fasting"
           />
           <Benefit
             icon="🧬"
             title="Anti-Inflammatory"
             text="Reduced inflammatory markers (CRP, IL-6, TNF-α). Chronic inflammation drives aging, joint pain, and disease — IF-P helps reverse it."
+            href="/blog/anti-inflammatory-fasting"
           />
           <Benefit
             icon="🦠"
             title="Gut Microbiome"
             text="Increased gut bacteria diversity. A healthier microbiome improves nutrient absorption, immune function, and even mood regulation."
+            href="/blog/gut-microbiome-fasting"
           />
           <Benefit
             icon="😌"
             title="Less Hunger"
             text="Participants reported significantly less hunger vs. standard calorie restriction. Protein pacing stabilises blood sugar and keeps you fuller, longer."
+            href="/blog/reduced-hunger-protein-pacing"
           />
           <Benefit
             icon="📊"
             title="Better Lipid Profile"
             text="Improved cholesterol ratios and reduced triglycerides. Your cardiovascular risk markers improve alongside your body composition."
+            href="/blog/lipid-profile-if-p"
           />
           <Benefit
             icon="⚡"
             title="Metabolic Rate Preserved"
             text="Unlike crash diets that tank your metabolism, IF-P maintains resting metabolic rate. You keep burning calories efficiently."
+            href="/blog/metabolic-rate-fasting"
           />
           <Benefit
             icon="🩸"
             title="Insulin Sensitivity"
             text="Improved blood glucose regulation and insulin response. Better nutrient partitioning means more of what you eat fuels muscle, not fat."
+            href="/blog/insulin-sensitivity-if-p"
           />
         </div>
       </section>
