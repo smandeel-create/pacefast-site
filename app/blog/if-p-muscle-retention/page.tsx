@@ -21,13 +21,13 @@ export default function Article() {
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
       <Link
         href="/blog"
-        className="text-sm text-text-secondary hover:text-primary transition-colors"
+        className="text-sm text-text-secondary hover:text-text-primary transition-colors"
       >
         &larr; Back to all articles
       </Link>
 
       <article className="mt-8">
-        <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+        <span className="inline-block rounded-full text-xs font-medium text-text-secondary uppercase tracking-wider">
           Body Recomp
         </span>
         <h1 className="mt-4 text-3xl md:text-4xl font-bold text-text-primary leading-tight">
@@ -35,7 +35,7 @@ export default function Article() {
         </h1>
         <p className="mt-4 text-text-secondary">April 2026</p>
 
-        <div className="mt-10 space-y-6 text-text-primary/90 leading-relaxed">
+        <div className="mt-10 space-y-6 text-text-primary leading-relaxed">
           <p>
             The dirty secret of most diets is that you don&rsquo;t just lose
             fat. Standard caloric restriction typically results in 25&ndash;30%
@@ -147,7 +147,7 @@ export default function Article() {
           </p>
         </div>
 
-        <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
+        <div className="mt-12 rounded-2xl border border-border bg-surface p-6 text-center">
           <p className="font-semibold text-text-primary">
             Build muscle. Burn fat. Same time.
           </p>
@@ -156,7 +156,7 @@ export default function Article() {
           </p>
           <a
             href="/#signup"
-            className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-[#0D1117] transition-all hover:bg-primary-dark"
+            className="mt-4 inline-block rounded-full bg-[#2c2b25] px-6 py-2.5 text-sm font-semibold text-[#faf9f6] transition-all hover:bg-[#5e5b4e]"
           >
             Join the Waitlist
           </a>

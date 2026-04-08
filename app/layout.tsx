@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, Lora, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const lora = Lora({
+  variable: "--font-geist-serif",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -54,22 +60,21 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-[#0D1117]/80 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          <span className="text-primary">Pace</span>
-          <span className="text-text-primary">Fast</span>
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
+        <Link href="/" className="font-serif text-xl font-semibold tracking-tight text-text-primary">
+          PaceFast
         </Link>
         <div className="flex items-center gap-8">
           <Link
             href="/blog"
             className="text-sm text-text-secondary hover:text-text-primary transition-colors"
           >
-            Science & Blog
+            Science &amp; Blog
           </Link>
           <a
             href="#signup"
-            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-[#0D1117] transition-all hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20"
+            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-[#faf9f6] transition-all hover:bg-primary-hover"
           >
             Get Early Access
           </a>
@@ -81,13 +86,12 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-surface mt-auto">
-      <div className="mx-auto max-w-6xl px-6 py-12">
+    <footer className="border-t border-border bg-surface mt-auto">
+      <div className="mx-auto max-w-[1200px] px-6 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <p className="text-lg font-bold">
-              <span className="text-primary">Pace</span>
-              <span className="text-text-primary">Fast</span>
+            <p className="font-serif text-lg font-semibold text-text-primary">
+              PaceFast
             </p>
             <p className="mt-2 text-sm text-text-secondary">
               Protein pacing + intermittent fasting.
@@ -101,17 +105,17 @@ function Footer() {
             </p>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li>
-                <Link href="/blog/what-is-protein-pacing" className="hover:text-primary transition-colors">
+                <Link href="/blog/what-is-protein-pacing" className="hover:text-text-primary transition-colors">
                   What is Protein Pacing?
                 </Link>
               </li>
               <li>
-                <Link href="/blog/intermittent-fasting-visceral-fat" className="hover:text-primary transition-colors">
+                <Link href="/blog/intermittent-fasting-visceral-fat" className="hover:text-text-primary transition-colors">
                   IF &amp; Visceral Fat Loss
                 </Link>
               </li>
               <li>
-                <Link href="/blog/if-p-muscle-retention" className="hover:text-primary transition-colors">
+                <Link href="/blog/if-p-muscle-retention" className="hover:text-text-primary transition-colors">
                   Muscle Retention on IF-P
                 </Link>
               </li>
@@ -123,14 +127,14 @@ function Footer() {
             </p>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li>
-                <Link href="/blog" className="hover:text-primary transition-colors">
+                <Link href="/blog" className="hover:text-text-primary transition-colors">
                   All Articles
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-white/5 pt-6 text-center text-xs text-text-secondary">
+        <div className="mt-10 border-t border-border pt-6 text-center text-xs text-text-secondary">
           &copy; {new Date().getFullYear()} PaceFast. All rights reserved.
         </div>
       </div>
@@ -146,7 +150,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${lora.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />

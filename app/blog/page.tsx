@@ -114,21 +114,21 @@ export default function BlogIndex() {
           <Link
             key={a.slug}
             href={`/blog/${a.slug}`}
-            className="group block rounded-2xl border border-white/5 bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+            className="group block rounded-2xl border border-border bg-surface p-6 transition-all hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1"
           >
             <div className="flex items-center gap-3 mb-3">
-              <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              <span className="inline-block rounded-full text-xs font-medium text-text-secondary uppercase tracking-wider">
                 {a.tag}
               </span>
               <span className="text-xs text-text-secondary">{a.date}</span>
             </div>
-            <h2 className="text-xl font-semibold text-text-primary group-hover:text-primary transition-colors">
+            <h2 className="text-xl font-semibold text-text-primary group-hover:text-[#5e5b4e] transition-colors">
               {a.title}
             </h2>
             <p className="mt-2 text-sm text-text-secondary leading-relaxed">
               {a.excerpt}
             </p>
-            <span className="mt-3 inline-block text-sm font-medium text-primary">
+            <span className="mt-3 inline-block text-sm font-medium text-[#5e5b4e]">
               Read more &rarr;
             </span>
           </Link>

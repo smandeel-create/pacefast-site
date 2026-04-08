@@ -1,37 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0D1117;
-  --surface: #161B22;
-  --primary: #00B894;
-  --primary-dark: #009B7D;
-  --accent: #F59E0B;
-  --text-primary: #E6EDF3;
-  --text-secondary: #8B949E;
-  --success: #2EA043;
-  --danger: #F85149;
-  --foreground: #E6EDF3;
+  --background: #faf9f6;
+  --surface: #f0eee6;
+  --surface-hover: #e8e6dc;
+  --primary: #2c2b25;
+  --primary-hover: #5e5b4e;
+  --accent-teal: #b5c5c0;
+  --accent-blue: #b4c6d4;
+  --accent-purple: #c5bfd9;
+  --accent-pink: #e0c5ce;
+  --accent-amber: #d4941e;
+  --text-primary: #141413;
+  --text-secondary: #6b6860;
+  --border: #e5e2d9;
+  --border-dark: #d1cfc5;
+  --foreground: #141413;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
   --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-accent: var(--accent);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-amber: var(--accent-amber);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-success: var(--success);
-  --color-danger: var(--danger);
+  --color-border: var(--border);
+  --color-border-dark: var(--border-dark);
   --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-geist-serif);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -39,5 +50,5 @@ html {
 }
 
 ::selection {
-  background: rgba(0, 184, 148, 0.3);
+  background: rgba(181, 197, 192, 0.4);
 }
