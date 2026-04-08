@@ -1,13 +1,5 @@
 import Link from "next/link";
-
-/* colour accent bars for benefit cards - matching Skilljar style */
-const accentColors: Record<string, string> = {
-  teal: "bg-accent-teal",
-  blue: "bg-accent-blue",
-  purple: "bg-accent-purple",
-  pink: "bg-accent-pink",
-  amber: "bg-[#d4941e]",
-};
+import BenefitIllustration from "./components/BenefitIllustration";
 
 /* ── Stat badge ── */
 function Stat({ value, label }: { value: string; label: string }) {
@@ -24,19 +16,19 @@ function Benefit({
   title,
   text,
   href,
-  accent,
+  slug,
 }: {
   title: string;
   text: string;
   href: string;
-  accent: string;
+  slug: string;
 }) {
   return (
     <Link
       href={href}
       className="group rounded-xl bg-white p-6 transition-all duration-200 hover:bg-surface"
     >
-      <div className={`h-1.5 w-12 rounded-full ${accent} mb-5`} />
+      <BenefitIllustration slug={slug} />
       <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
       <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">{text}</p>
       <span className="mt-4 inline-block text-sm font-medium text-text-secondary group-hover:text-text-primary transition-colors">
@@ -170,55 +162,55 @@ export default function Home() {
             title="Visceral Fat Loss"
             text="33% reduction in visceral fat — the dangerous fat surrounding your organs linked to heart disease, type 2 diabetes, and metabolic syndrome."
             href="/blog/intermittent-fasting-visceral-fat"
-            accent="bg-accent-teal"
+            slug="visceral-fat-loss"
           />
           <Benefit
             title="Muscle Retention"
             text="6% increase in fat-free mass during weight loss. Protein pacing triggers muscle protein synthesis 4 times per day, protecting lean tissue."
             href="/blog/if-p-muscle-retention"
-            accent="bg-accent-blue"
+            slug="muscle-retention"
           />
           <Benefit
             title="Improved VO2 Max"
             text="Significant improvements in cardiorespiratory fitness, even without changes to exercise routine. Better oxygen efficiency across all activities."
             href="/blog/vo2-max-intermittent-fasting"
-            accent="bg-accent-purple"
+            slug="improved-vo2-max"
           />
           <Benefit
             title="Anti-Inflammatory"
             text="Reduced inflammatory markers (CRP, IL-6, TNF-α). Chronic inflammation drives aging, joint pain, and disease — IF-P helps reverse it."
             href="/blog/anti-inflammatory-fasting"
-            accent="bg-accent-pink"
+            slug="anti-inflammatory"
           />
           <Benefit
             title="Gut Microbiome"
             text="Increased gut bacteria diversity. A healthier microbiome improves nutrient absorption, immune function, and even mood regulation."
             href="/blog/gut-microbiome-fasting"
-            accent="bg-accent-teal"
+            slug="gut-microbiome"
           />
           <Benefit
             title="Less Hunger"
             text="Participants reported significantly less hunger vs. standard calorie restriction. Protein pacing stabilises blood sugar and keeps you fuller, longer."
             href="/blog/reduced-hunger-protein-pacing"
-            accent="bg-accent-blue"
+            slug="less-hunger"
           />
           <Benefit
             title="Better Lipid Profile"
             text="Improved cholesterol ratios and reduced triglycerides. Your cardiovascular risk markers improve alongside your body composition."
             href="/blog/lipid-profile-if-p"
-            accent="bg-accent-purple"
+            slug="better-lipid-profile"
           />
           <Benefit
             title="Metabolic Rate Preserved"
             text="Unlike crash diets that tank your metabolism, IF-P maintains resting metabolic rate. You keep burning calories efficiently."
             href="/blog/metabolic-rate-fasting"
-            accent="bg-accent-pink"
+            slug="metabolic-rate-preserved"
           />
           <Benefit
             title="Insulin Sensitivity"
             text="Improved blood glucose regulation and insulin response. Better nutrient partitioning means more of what you eat fuels muscle, not fat."
             href="/blog/insulin-sensitivity-if-p"
-            accent="bg-accent-teal"
+            slug="insulin-sensitivity"
           />
         </div>
       </section>
