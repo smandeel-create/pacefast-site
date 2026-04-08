@@ -69,20 +69,20 @@ function BlogCard({
   title,
   excerpt,
   tag,
-  accent,
+  slug,
 }: {
   href: string;
   title: string;
   excerpt: string;
   tag: string;
-  accent: string;
+  slug: string;
 }) {
   return (
     <Link
       href={href}
       className="group rounded-xl bg-white p-6 transition-all duration-200 hover:bg-surface"
     >
-      <div className={`h-1.5 w-8 rounded-full ${accent} mb-4`} />
+      <BenefitIllustration slug={slug} />
       <span className="text-xs font-medium text-text-secondary uppercase tracking-wider">
         {tag}
       </span>
@@ -273,21 +273,21 @@ export default function Home() {
             title="What Is Protein Pacing? The Science Behind 4 Meals a Day"
             excerpt="Why meal timing matters as much as total intake, and how spacing protein across 4 meals maximises muscle protein synthesis."
             tag="Fundamentals"
-            accent="bg-accent-teal"
+            slug="protein-pacing"
           />
           <BlogCard
             href="/blog/intermittent-fasting-visceral-fat"
             title="How Intermittent Fasting Targets Visceral Fat"
             excerpt="A 33% reduction in visceral fat in 8 weeks. How IF triggers lipolysis in the most dangerous fat deposits."
             tag="Fat Loss"
-            accent="bg-accent-blue"
+            slug="visceral-fat-loss"
           />
           <BlogCard
             href="/blog/if-p-muscle-retention"
             title="Losing Fat Without Losing Muscle: The IF-P Advantage"
             excerpt="Standard diets lose 25-30% of weight as lean mass. IF-P participants gained 6% fat-free mass while losing weight."
             tag="Body Recomp"
-            accent="bg-accent-purple"
+            slug="muscle-retention"
           />
         </div>
         <div className="text-center mt-10">

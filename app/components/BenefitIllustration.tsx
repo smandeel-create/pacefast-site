@@ -98,6 +98,21 @@ const drawings: Record<string, DrawFn> = {
     svg.appendChild(rc.path("M 60 70 Q 52 80, 54 88 Q 56 94, 60 95 Q 64 94, 66 88 Q 68 80, 60 70", fillOpts("#e0c5ce", { fillWeight: 0.6, hachureGap: 3, roughness: 1.2, seed: 126 })));
   },
 
+  "protein-pacing": (rc, svg) => {
+    // Clock face
+    svg.appendChild(rc.circle(60, 50, 70, fillOpts("#d4c9a8", { fillStyle: "solid", seed: 140 })));
+    // Clock hands
+    svg.appendChild(rc.line(60, 50, 60, 24, opts({ strokeWidth: 2.2, seed: 141 })));
+    svg.appendChild(rc.line(60, 50, 78, 42, opts({ strokeWidth: 2, seed: 142 })));
+    // Center dot
+    svg.appendChild(rc.circle(60, 50, 5, fillOpts(INK, { fillStyle: "solid", strokeWidth: 1, roughness: 0.8, seed: 143 })));
+    // 4 meal dots at 12, 3, 6, 9 positions (spaced meals)
+    svg.appendChild(rc.circle(60, 18, 10, fillOpts("#b5c5c0", { fillStyle: "solid", strokeWidth: 1.5, seed: 144 })));
+    svg.appendChild(rc.circle(92, 50, 10, fillOpts("#b4c6d4", { fillStyle: "solid", strokeWidth: 1.5, seed: 145 })));
+    svg.appendChild(rc.circle(60, 82, 10, fillOpts("#c5bfd9", { fillStyle: "solid", strokeWidth: 1.5, seed: 146 })));
+    svg.appendChild(rc.circle(28, 50, 10, fillOpts("#e0c5ce", { fillStyle: "solid", strokeWidth: 1.5, seed: 147 })));
+  },
+
   "insulin-sensitivity": (rc, svg) => {
     svg.appendChild(rc.path("M 45 15 Q 25 45, 25 58 Q 25 78, 45 78 Q 65 78, 65 58 Q 65 45, 45 15", fillOpts("#b5c5c0", { seed: 130 })));
     svg.appendChild(rc.line(37, 44, 37, 56, opts({ stroke: "#faf9f6", strokeWidth: 2, roughness: 1, seed: 131 })));
